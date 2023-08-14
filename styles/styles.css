@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.cabecalho{
+    padding: 2% 15% 0% 15%;
+}
+.cabecalho :hover{
+    color:rgb(140, 0, 255);
+}
+.cabecalho__menu{
+    display: flex;
+    justify-content: space-around;
+}
+.cabecalho__menu__link{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    border: rgb(140, 0, 255) solid 2px;
+    width: 270px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px #5d71d7,0 0 5px #5d71d7;
+}
+.cabecalho__menu__link :hover{
+    background-color: black;
+    animation: pulse1 3s infinite;
+    transition: 3s;
+}
+@keyframes pulse1{
+    0%{
+        transform: scale(1);
+    }
+    50%{transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.apresentacao{
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.apresentacao__conteudo__titulo{
+    font-size: 28px;
+    color: greenyellow;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 22ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(22),
+    blinking 0.5s infinite step-end alternate;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+@keyframes blinking{
+    50%{
+        border-color: transparent;
+    }
+}
+.apresentacao__conteudo__titulo2{
+    color: white;
+    text-shadow:  0 0 0.2em #87F, 0 0 0.2em #87F,
+    0 0 0.2em #87F
+}
+.apresentacao__conteudo__texto{
+    font-size: 25px;
+    
+}
+.imghome{
+    border: rgb(140, 0, 255) solid 2px;
+    box-shadow: 0 0 100px #5d71d7,0 0 5px #5d71d7;
+}
+.imghome :hover{
+    background-color: black;
+    animation: pulse1 3s infinite;
+    transition: 3s;
+}
+@keyframes pulse1{
+    0%{
+        transform: scale(1);
+    }
+    50%{transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.imgabout{
+    border: white solid 2px;
+    box-shadow: 0 0 10px white
+
+
+}
+.rodape{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    height: 4rem;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+}
