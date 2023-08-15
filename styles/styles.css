@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
 
+:root{
+    --cor-primeira: rgb(140, 0, 255);
+    --cor-segunda: black;
+    --cor-terceira:rgb(255, 255, 255);
+    --cor-quarta:#5d71d7;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,14 +14,15 @@
 body{
     height: 100vh;
     box-sizing: border-box;
-    background-color: black;
-    color: white;
+    background-color: var(--cor-segunda);
+    color: var(--cor-terceira)
+    
 }
 .cabecalho{
     padding: 2% 15% 0% 15%;
 }
 .cabecalho :hover{
-    color:rgb(140, 0, 255);
+    color:var(--cor-primeira);
 }
 .cabecalho__menu{
     display: flex;
@@ -24,17 +32,17 @@ body{
     display: flex;
     justify-content: center;
     gap: 5px;
-    border: rgb(140, 0, 255) solid 2px;
+    border: var(--cor-primeira) solid 2px;
     width: 270px;
     text-align: center;
     border-radius: 8px;
     font-size: 24px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 50px #5d71d7,0 0 5px #5d71d7;
+    color: var(--cor-terceira);
+    box-shadow: 0 0 50px var(--cor-quarta),0 0 5px var(--cor-quarta);
 }
 .cabecalho__menu__link :hover{
-    background-color: black;
+    background-color: var(--cor-segunda);
     animation: pulse1 3s infinite;
     transition: 3s;
 }
@@ -52,8 +60,22 @@ body{
     padding: 8% 15%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-around
+}
+.apresentacao__about{
+    font-family: monospace;
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.apresentacao__curriculo{
+    font-family: monospace;
+    font-size: 20px;
+    padding: 8% 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .apresentacao__conteudo{
     width: 615px;
@@ -83,7 +105,8 @@ body{
     }
 }
 .apresentacao__conteudo__titulo2{
-    color: white;
+    font-size: 30px;
+    color: var(--cor-terceira);
     text-shadow:  0 0 0.2em #87F, 0 0 0.2em #87F,
     0 0 0.2em #87F
 }
@@ -91,34 +114,44 @@ body{
     font-size: 25px;
     
 }
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__subtitulo{
+    font-size: 35px;  
+}
+.apresentacao__links__link{
+    border: 1px solid var(--cor-primeira);
+    border-radius: 8px;
+    width: 300px;
+    font-size: 20px;
+    color: var(--cor-terceira);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    padding: 0.5px 0;
+    color: var(--cor-terceira);
+    box-shadow: 0 0 20px var(--cor-quarta),0 0 5px var(--cor-quarta);
+}
+.apresentacao__links :hover{
+color: #000000;
+background-color: rgb(146, 146, 146);
+}
 .imghome{
-    border: rgb(140, 0, 255) solid 2px;
-    box-shadow: 0 0 100px #5d71d7,0 0 5px #5d71d7;
+    border: var(--cor-terceira) solid 2px;
+    box-shadow: 0 0 10px var(--cor-terceira)
 }
-.imghome :hover{
-    background-color: black;
-    animation: pulse1 3s infinite;
-    transition: 3s;
-}
-@keyframes pulse1{
-    0%{
-        transform: scale(1);
-    }
-    50%{transform: scale(0.95);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
 .imgabout{
-    border: white solid 2px;
-    box-shadow: 0 0 10px white
-
-
+    border: var(--cor-terceira) solid 2px;
+    box-shadow: 0 0 10px var(--cor-terceira)
 }
 .rodape{
-    color: rgb(255, 255, 255);
+    color: var(--cor-terceira);
     font-size: 20px;
     position: absolute;
     height: 4rem;
@@ -126,4 +159,18 @@ body{
     bottom: 0;
     text-align: center;
     text-decoration: none;
+}
+.myname{
+    color: rgb(221, 170, 255);
+}
+  ul.b {
+    list-style-type: square;
+  }
+.completo{
+    color: rgb(0, 255, 0);
+    text-shadow: 0.1em 0.1em 0.2em var(--cor-terceira)
+}
+.cursando{
+    color: yellow;
+    text-shadow: 0.1em 0.1em 0.2em var(--cor-terceira)
 }
